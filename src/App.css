@@ -1,38 +1,182 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+h1 {
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+form {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+form button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.listado {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-item {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.button-group button {
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 5px 8px;
+  font-size: 0.9rem;
+}
+
+.visualizacion {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.buscador {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Estilos para representar las relaciones de padres e hijos */
+ul.list-group {
+  list-style: none;  
+  padding-left: 20px;
+  position: relative;
+}
+
+ul.list-group:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  bottom: 0;
+  width: 2px;
+  background: #ced4da;  /* Color gris para la linea de conexion */
+}
+
+.list-group-item {
+  position: relative;
+  padding-left: 25px;  /* Espacio para separar los elementos del arbol */
+}
+
+.list-group-item:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background: #ced4da;  /* Línea horizontal para conectar al nodo padre */
+}
+
+.btn-danger, .btn-success {
+  min-width: 180px;  /* Aumentar el ancho minimo para asegurarse de que el texto entre sin problemas */
+  padding: 8px 12px;  /* Ajustar el padding para mejorar la apariencia */
+  font-size: 0.9rem;  /* Asegurar un tamaño de fuente adecuado */
+  text-align: center;  /* Centramos el texto */
+  overflow: visible;  /* Asegurarse de que el texto no se recorte */
+  white-space: nowrap;  /* Asegurar que el texto se mantenga en una sola linea */
+}
+
+/* Botones Pequeños */
+.btn-sm {
+  height: auto;  /* Ajustar la altura para que se adapte al contenido */
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  h1 {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .listado {
+    max-width: 100%;
+  }
+
+  .visualizacion {
+    margin-top: 20px;
   }
 }
