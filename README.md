@@ -1,3 +1,37 @@
+
+# 🌳 Árbol Genealógico
+
+Aplicación desarrollada en **React** y **JavaScript** que permite a los usuarios construir y visualizar su árbol genealógico de forma interactiva, registrando familiares, relaciones y búsquedas de parentesco.
+
+## 🧠 Funcionalidades principales
+
+- Alta de usuario con sus datos personales
+- Registro de familiares con confirmación
+- Visualización del árbol genealógico
+- Búsqueda de parentesco entre dos personas
+- Listado de todos los familiares registrados
+- Filtros por relación (padres, hermanos, hijos, etc.)
+- Persistencia de datos local con LocalStorage
+
+## ⚙️ Tecnologías utilizadas
+
+- React
+- JavaScript
+- React Router
+- Context API y useState para manejo de estado
+- CSS Modules / Tailwind / Styled Components (según lo que uses)
+- LocalStorage (sin base de datos externa)
+
+
+## 🛠️ Instalación
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/ajoca/arbol-genealogico.git
+cd arbol-genealogico
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
